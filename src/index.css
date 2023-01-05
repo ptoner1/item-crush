@@ -1,13 +1,69 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+html {
+  font-size: 62.5%;
+  font-family: 'roboto', 'sans-serif';
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@media only screen and (max-width: 740px) {
+  html {
+    font-size: 55%;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  html {
+    font-size: 85%;
+  }
+}
+
+.App {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  z-index: 2;
+}
+
+.item {
+  height: 92%;
+  width: 92%;
+  justify-self: center;
+  align-self: center;
+  cursor: pointer;
+  transition: all .2s;
+}
+
+.animateItem {
+  animation: animateDown .15s ease-out;
+}
+
+.item:hover {
+  translate: 0 -5%;
+}
+
+.hold {
+  opacity: 0;
+}
+
+
+
+/* Credit to icons8.com */
+.icon-credit {
+  color: #fff;
+  position: absolute;
+  right: 2%;
+  bottom: 2%;
+  z-index: inherit;
+  cursor: default;
+}
+
+.icon-credit a,
+.icon-credit a:active,
+.icon-credit a:visited {
+  color: rgb(188, 255, 188);
 }

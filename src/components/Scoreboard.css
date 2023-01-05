@@ -1,0 +1,112 @@
+/* SCOREBOARD STYLES */
+.scoreboard {
+    position: relative;
+    display: flex;
+    width: 70vw;
+    max-width: 80vh;
+    justify-content: space-between;
+    align-items: start;
+    text-align: center;
+    cursor: default;
+}
+
+.scoreboard h2 {
+    color: rgba(0, 0, 0, 0.75);
+    background-color: rgba(255, 255, 255, 0.8);
+    font-size: 3rem;
+    padding: .8rem;
+    border-radius: 5px;
+    rotate: -10deg;
+    translate: -40% 0;
+    display: inline-block;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+.scoreboard h2:last-child {
+    rotate: 10deg;
+    translate: 40% 0;
+    margin-block-start: .3rem;
+}
+
+@media only screen and (max-width: 740px) {
+    .scoreboard {
+        width: 100vw;
+        max-width: 100vw;
+        justify-content: space-evenly;
+    }
+
+    .scoreboard h2,
+    .scoreboard h2:last-child {
+        rotate: 0deg;
+        translate: 0;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .scoreboard {
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: center;
+    }
+}
+
+.scoreboard h1 {
+    position: absolute;
+    left: 50%;
+    font-size: 4rem;
+    translate: -50% 0;
+    font-family: 'Fredoka One', 'sans-serif';
+    background: linear-gradient(90deg, rgba(2, 179, 0, .9) 0%, rgba(0, 0, 159, 0.8) 25%, rgba(172, 0, 106, 0.8) 50%,
+            rgba(179, 0, 0, 1) 75%, rgba(235, 139, 11, 1) 100%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    z-index: 10;
+    opacity: 0;
+}
+
+#h1-shadow {
+    position: absolute;
+    left: 49.5%;
+    top: 2.5%;
+    background: rgba(255, 255, 255, 0.5);
+    background-clip: text;
+    z-index: 1;
+}
+
+@media only screen and (min-width: 775px) {
+    .flashTitle {
+        animation: flashTitle 2s .3s;
+    }
+}
+
+@keyframes flashTitle {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 100%;
+        font-size: 4.1rem;
+        translate: calc(-50% -.1rem) -.1rem;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes animateDown {
+    0% {
+        translate: 0 -100%;
+    }
+
+    80% {
+        translate: 0 10%;
+    }
+
+    100% {
+        translate: 0 0;
+    }
+}

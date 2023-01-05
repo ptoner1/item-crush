@@ -1,0 +1,168 @@
+.settings-bar {
+    display: flex;
+    justify-content: space-evenly;
+    width: 80vw;
+}
+
+@media only screen and (max-width: 740px) {
+    .settings-bar {
+        justify-content: space-evenly;
+        width: 100vw;
+    }
+}
+
+.settings-title {
+    color: rgba(0, 0, 0, 0.75);
+    background-color: rgba(255, 255, 255, 0.8);
+    font-size: 2.5rem;
+    font-weight: 600;
+    padding: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all .2s;
+    border: none;
+    z-index: 3;
+}
+
+@media only screen and (max-width: 500px) {
+    .settings-bar {
+        flex-direction: column;
+    }
+
+    .settings-title {
+        padding: 1.8rem .8rem;
+    }
+
+    .settings-title:not(:last-child) {
+        margin-bottom: .3rem;
+    }
+}
+
+.settings-title:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 5px 5px 5px 2px rgba(0, 0, 0, 0.2);
+    translate: 0 -5%;
+}
+
+.settings-title:active {
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: none;
+    translate: 0 -2%;
+}
+
+.settings-popup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: 1;
+    background-color: rgba(255, 255, 255, 0.9);
+    width: 45vw;
+    height: 30vh;
+    padding: 33vh 26vw;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    filter: blur(0px);
+    opacity: 0;
+    transition: opacity .5s;
+}
+
+@media only screen and (max-width: 799px) {
+    .settings-popup {
+        width: 60vw;
+        padding: 33vh 19vw;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .settings-popup {
+        width: 100vw;
+        height: 60vh;
+        padding: 20vh 0;
+        flex-direction: column;
+        border-radius: 0;
+    }
+}
+
+@media only screen and (min-width: 1060px) {
+    .settings-popup {
+        width: 35vw;
+        padding: 33vh 31vw;
+    }
+}
+
+@media only screen and (min-width: 1500px) {
+    .settings-popup {
+        width: 30vw;
+        padding: 33vh 34vw;
+    }
+}
+
+.settings-popup__btn {
+    color: rgba(0, 0, 0, 0.75);
+    background-color: rgb(255, 255, 255);
+    font-size: 2.4rem;
+    font-weight: 600;
+    padding: 2.4rem;
+    border-radius: 500px;
+    margin: .5rem;
+    cursor: pointer;
+    transition: all .2s;
+}
+
+.settings-popup__btn:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 5px 5px 5px 2px rgba(0, 0, 0, 0.2);
+    translate: 0 -5%;
+}
+
+.settings-popup__btn:active {
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: none;
+    translate: 0 -2%;
+}
+
+.settings-go-back {
+    position: absolute;
+    left: 50%;
+    top: 10%;
+    translate: -50% 0;
+    color: rgba(255, 255, 255, 0.75);
+    background-color: rgba(118, 118, 118, 0.7);
+    font-size: 2.4rem;
+    padding: .8rem;
+    border-radius: 5px;
+    cursor: default;
+    transition: all .2s;
+    border: none;
+}
+
+.settings-go-back:hover {
+    background-color: rgba(163, 163, 163, 0.7);
+}
+
+.settings-popup__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.settings-popup__label {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.settings-popup__select {
+    width: 7rem;
+    height: 3.5rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2.4rem;
+    font-family: 'roboto', sans-serif;
+    border-radius: 5px;
+}
