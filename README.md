@@ -4,7 +4,8 @@
    It is currently deployed at http://itemcrush-paultoner.s3-website-us-east-1.amazonaws.com/
 </p>
 
-<h1>Improvement Suggestions</h1>
+</br>
+<h2>Improvement Suggestions</h2>
 <ul>
    <li>
     Top row of gameBoard is hit or miss with the animateDown property.
