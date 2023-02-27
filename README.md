@@ -1,7 +1,10 @@
 <h1>Item Crush</h1>
 <p>
    This is a Candy Crush clone using React.  It's called Item Crush because we allow the user to change their game pieces from candies to animals. 
-   It is currently deployed at http://itemcrush-paultoner.s3-website-us-east-1.amazonaws.com/
+   It is currently deployed 
+   <a href="http://itemcrush-paultoner.s3-website-us-east-1.amazonaws.com/" target="_blank">
+      here.
+   </a>
 </p>
 
 </br>
